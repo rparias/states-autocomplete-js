@@ -1,5 +1,26 @@
-'use strict';
+'use strict'
 
-import '../sass/app.scss';
+import '../sass/app.scss'
 
-//-- Autocomplete component
+class App {
+  constructor() {
+    this.$statesInput = document.querySelector('#states')
+
+    this.addEventListeners();
+  }
+
+  addEventListeners() {
+    this.$statesInput.addEventListener("keyup", () => {
+      const { value } = this.$statesInput
+      if(value.length >= 2) {
+        this.fetchStates(value)
+      }
+    })
+  }
+
+  fetchStates(inputStates) {
+    console.log(inputStates)
+  }
+}
+
+new App()
