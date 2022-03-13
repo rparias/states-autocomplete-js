@@ -1,6 +1,8 @@
 'use strict'
 
 import '../sass/app.scss'
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
 import view from './utils/view'
 import Autocomplete from './components/Autocomplete'
 import DatalistStates from './DatalistStates'

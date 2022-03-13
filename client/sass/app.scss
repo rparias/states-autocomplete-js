@@ -20,12 +20,13 @@ button {
 	position: absolute;
 	border-radius: 50%;
 	background: none;
-	right: 4px;
-	top: 4px;
+	right: 8px;
+	top: 28px;
 }
 
 input[type="text"] {
 	font-size: 1.2rem;
+	width: 100%;
 }
 
 input::-webkit-calendar-picker-indicator {
