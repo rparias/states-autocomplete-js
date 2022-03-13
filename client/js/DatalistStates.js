@@ -6,6 +6,7 @@ import { fetchStates } from './states'
  * @param  {DOM Element} parentElement  The parent element where the datalist will be rendered
  */
 function getDatalistStates(states, parentElement) {
+  removeExistingDatalist()
   let $dataList = document.createElement('datalist')
   $dataList.id = 'states-datalist'
   parentElement.setAttribute('list', $dataList.id)
@@ -21,6 +22,11 @@ function getDatalistStates(states, parentElement) {
   $dataList.append($fragment)
 
   parentElement.after($dataList)
+}
+
+function removeExistingDatalist() {
+  let $existingDatalist = document.getElementById('states-datalist')
+  $existingDatalist?.remove()
 }
 
 export default function DatalistStates(parentElementWithInputValue) {
