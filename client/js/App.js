@@ -1,15 +1,23 @@
 'use strict'
 
 import '../sass/app.scss'
+import view from './utils/view'
+import Autocomplete from './components/Autocomplete'
 import DatalistStates from './DatalistStates'
 
 class App {
   constructor() {
+    this.renderApp()
+
     this.$statesInput = document.querySelector('#states')
     this.$datalistStates = document.querySelector('#states-datalist')
     this.$clearButton = document.querySelector('#clear-button')
 
     this.addEventListeners()
+  }
+
+  renderApp() {
+    view.innerHTML = Autocomplete(5)
   }
 
   addEventListeners() {
