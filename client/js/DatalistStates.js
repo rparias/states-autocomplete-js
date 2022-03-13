@@ -12,7 +12,11 @@ function getDatalistStates(states, parentElement) {
 
   let $fragment = document.createDocumentFragment()
 
-  states.forEach(state => {
+  let statesToIterate = states
+  if(states.length > 5) {
+    statesToIterate = states.slice(0, 5)
+  }
+  statesToIterate.forEach(state => {
     let $option = document.createElement('option')
     $option.textContent = state.name
     $fragment.append($option)
