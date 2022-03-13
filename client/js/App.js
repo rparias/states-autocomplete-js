@@ -23,8 +23,10 @@ class App {
   }
 
   addEventListeners() {
-    this.$statesInput.addEventListener("keyup", () => {
-      this.renderDatalist()
+    this.$statesInput.addEventListener("keyup", (e) => {
+      if (e.which <= 90 && e.which >= 48) {
+        this.renderDatalist()
+      }
     })
 
     this.$clearButton.addEventListener("click", () => {
