@@ -10,3 +10,16 @@ body {
 	padding: 2rem;
 	font-size: 1.5rem;
 }
+
+button {
+	border-radius: 50%;
+	background: none;
+}
+
+input[type="text"] {
+	font-size: 1.2rem;
+}
+
+input::-webkit-calendar-picker-indicator {
+	opacity: 0;
+}
