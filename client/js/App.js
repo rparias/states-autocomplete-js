@@ -13,11 +13,22 @@ class App {
 
   addEventListeners() {
     this.$statesInput.addEventListener("keyup", () => {
-      DatalistStates(this.$statesInput)
+      this.renderDatalist()
     })
-    this.$statesInput.addEventListener("input", () => {
-      console.log('hola')
-    })
+  }
+
+  renderDatalist() {
+    let options = this.$datalistStates.childNodes
+    let shouldRender = true
+
+    for(var i = 0; i < options.length; i++) {
+      if(this.$statesInput.value === options[i].value) {
+        shouldRender = false
+        break
+      }
+    }
+
+    DatalistStates(this.$statesInput, shouldRender)
   }
 }
 
