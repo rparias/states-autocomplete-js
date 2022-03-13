@@ -38,5 +38,7 @@ export default function DatalistStates(parentElementWithInputValue, shouldRender
   const { value } = parentElementWithInputValue
   if(value.length >= 2 && shouldRender) {
     fetchStates(value).then(response => getDatalistStates(response.data, parentElementWithInputValue))
+  } else {
+    removeExistingDatalistOptions()
   }
 }
