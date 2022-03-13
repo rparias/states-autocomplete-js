@@ -11,9 +11,17 @@ body {
 	font-size: 1.5rem;
 }
 
+.autocomplete-component {
+	position: relative;
+	width: fit-content;
+}
+
 button {
+	position: absolute;
 	border-radius: 50%;
 	background: none;
+	right: 4px;
+	top: 4px;
 }
 
 input[type="text"] {

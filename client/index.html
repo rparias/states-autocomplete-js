@@ -6,10 +6,12 @@
 <body>
 	<div id="app">
 		<!-- Autocomplete component -->
-		<label for="states">U.S. States</label>
-		<input type="text" id="states" placeholder="Search states" autocomplete="off">
-		<button id="clear-button">x</button>
-		<datalist id="states-datalist"/>
+		<div class="autocomplete-component">
+			<label for="states">U.S. States</label>
+			<input type="text" id="states" placeholder="Search states" autocomplete="off">
+			<button id="clear-button">x</button>
+			<datalist id="states-datalist"/>
+		</div>
 	</div>
 
 	<script src='../dist/main-bundle.js'></script>
